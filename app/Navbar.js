@@ -15,7 +15,7 @@ export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header className="bg-[#8B1E15] py-2 border-t-4 border-[#f45721]">
+		<header className="bg-[rgb(162,21,10)] py-2 border-t-4 border-[#f45721]">
 			<div className="mx-auto flex max-w-screen-xl items-center justify-between lg:px-6 md:px-2">
 				{/* Logo */}
 				<div className="flex items-center">

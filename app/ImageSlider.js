@@ -156,7 +156,7 @@ const ImageSlider = ({ children, interval = 3000, dragThreshold = 50 }) => {
 				onScroll={handleScroll}
 				onDragStart={(e) => e.preventDefault()} // Prevent default image dragging.
 				style={{ touchAction: "pan-y" }} // Allow vertical scrolling on mobile.
-				className={`flex overflow-x-scroll select-none w-screen no-scrollbar ${
+				className={`flex overflow-x-scroll select-none w-full no-scrollbar ${
 					isDragging ? "scroll-auto" : "scroll-smooth"
 				}`}
 			>
