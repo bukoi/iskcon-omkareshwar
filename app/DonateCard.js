@@ -14,8 +14,8 @@ export default function DonateCard({
     >
       {/* Event Image */}
       <div className="w-full h-48 overflow-hidden">
-        <Image
-          src={imageSrc}
+        <img
+          src={typeof imageSrc === "string" ? imageSrc : imageSrc.src}
           alt="Event Image"
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
         />
@@ -23,9 +23,7 @@ export default function DonateCard({
 
       {/* Event Details */}
       <div className="p-6 text-center">
-        <h3 className="text-lg font-semibold text-gray-900">
-          {title}
-        </h3>
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
       </div>
 
       {/* Donate Button */}

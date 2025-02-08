@@ -15,10 +15,11 @@ export default function EventCard({
     >
       {/* Event Image with Zoom on Hover */}
       <div className="w-full overflow-hidden">
-        <Image
-          src={imageSrc}
+        <img
+          src={typeof imageSrc === "string" ? imageSrc : imageSrc.src}
           alt="Event Image"
           className="w-full transition-transform duration-300 hover:scale-110"
+          loading="lazy"
         />
       </div>
 

@@ -22,26 +22,28 @@ export default function Home() {
   return (
     <div className="w-full p-0 m-0 flex flex-col items-center mb-10">
       <ImageSlider interval={10000} containerHeight="800px">
-        <Image
-          src={banner3}
+        <img
+          src={banner3.src}
           alt="Slide 1"
-		  width={800}
-		  height={600}
-          className="object-cover w-full h-full z--1 absolute" // Uses object-contain to fit the image
+          width="800"
+          height="600"
+          className="object-cover w-full h-full z--1 absolute"
         />
-        <Image
-          src={banner1}
+
+        <img
+          src={banner.src}
           alt="Slide 2"
-		  width={800}
-		  height={600}
-          className="object-cover w-full h-full z--1 absolute" // Uses object-contain to fit the image
+          width="800"
+          height="600"
+          className="object-cover w-full h-full z--1 absolute"
         />
-        <Image
-          src={banner}
+
+        <img
+          src={banner1.src}
           alt="Slide 3"
-		  width={800}
-		  height={600}
-          className="object-cover w-full h-full z--1 absolute" // Uses object-contain to fit the image
+          width="800"
+          height="600"
+          className="object-cover w-full h-full z--1 absolute"
         />
       </ImageSlider>
       <InfoCard></InfoCard>
@@ -80,7 +82,7 @@ We look forward to and will be pleased to have you visit and be a part of this i
             width="w-70"
             height="h-auto"
           >
-           <div className="flex flex-row items-center justify-center gap-1">
+            <div className="flex flex-row items-center justify-center gap-1">
               <FaUser className="text-red-700"></FaUser>
               <p className="text-gray-600 mt-2 cursor-pointer hover:text-orange-600 active:text-orange-600 focus:text-orange-600 tracking-tight leading-snug">
                 Admin
@@ -94,7 +96,7 @@ We look forward to and will be pleased to have you visit and be a part of this i
             width="w-70"
             height="h-auto"
           >
-           <div className="flex flex-row items-center justify-center gap-1">
+            <div className="flex flex-row items-center justify-center gap-1">
               <FaUser className="text-red-700"></FaUser>
               <p className="text-gray-600 mt-2 cursor-pointer hover:text-orange-600 active:text-orange-600 focus:text-orange-600 tracking-tight leading-snug">
                 Admin
@@ -119,7 +121,7 @@ We look forward to and will be pleased to have you visit and be a part of this i
           </EventCard>
         </div>
       </div>
-	  <div className="flex flex-col flex-wrap gap-6 mt-10 text-center">
+      <div className="flex flex-col flex-wrap gap-6 mt-10 text-center">
         <h2 className="text-red-700 text-4xl font-bold mt-5">
           Support Our Cause
         </h2>

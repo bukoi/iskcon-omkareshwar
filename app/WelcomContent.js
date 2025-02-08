@@ -10,13 +10,14 @@ export default function WelcomContent({ imageSrc, title }) {
 
       {/* Image Container */}
       <div className="w-full max-w-5xl">
-        <Image
-          src={imageSrc}
-          alt="Hero Section Image"
-          width={1200}
-          height={600}
-          className="rounded-xl object-cover w-full"
-        />
+      <img
+  src={typeof imageSrc === "string" ? imageSrc : imageSrc.src}
+  alt="Hero Section Image"
+  width="1200"
+  height="600"
+  className="rounded-xl object-cover w-full"
+/>
+
       </div>
 
       {/* Description Text */}
