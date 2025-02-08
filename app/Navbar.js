@@ -7,7 +7,7 @@ import { IoReorderThree, IoClose, IoHomeSharp } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
 const navLinks = [
   { href: "/", label: "Home", icon: <IoHomeSharp /> },
-  { href: "/about", label: "About", dropdown: true },
+  { href: "/About/FAQ", label: "About", dropdown: true },
   { href: "/activities", label: "Activities", dropdown: true },
   { href: "/donations", label: "Donations", dropdown: true },
   { href: "/gallery", label: "Gallery", dropdown: true },
