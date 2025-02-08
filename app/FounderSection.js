@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import mainimg from "@/public/founder.png";
-import backimg from "@/public/Background.jpeg";
+import backimg from "@/public/background.jpeg";
 
 export default function FounderSection() {
   return (
