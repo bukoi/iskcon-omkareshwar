@@ -13,25 +13,35 @@ import DonateCard from "@/app/DonateCard.js";
 import member from "@/public/member.jpg";
 import nityaseva from "@/public/nityaseva.jpg";
 import annadanH from "@/public/annadanH.jpg";
+import banner from "@/public/banner.jpg";
+import banner1 from "@/public/banner1.jpg";
+import banner3 from "@/public/banner3.jpg";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="w-full p-0 m-0 flex flex-col items-center mb-10">
       <ImageSlider interval={10000} containerHeight="800px">
-        <img
-          src="/1.jpg"
+        <Image
+          src={banner3}
           alt="Slide 1"
+		  width={800}
+		  height={600}
           className="object-cover w-full h-full z--1 absolute" // Uses object-contain to fit the image
         />
-        <img
-          src="/banner.jpg"
+        <Image
+          src={banner1}
           alt="Slide 2"
-          className="object-cover w-full h-full z--1 absolute"
+		  width={800}
+		  height={600}
+          className="object-cover w-full h-full z--1 absolute" // Uses object-contain to fit the image
         />
-        <img
-          src="/banner1.jpg"
+        <Image
+          src={banner}
           alt="Slide 3"
-          className="object-cover w-full h-full z--1 absolute"
+		  width={800}
+		  height={600}
+          className="object-cover w-full h-full z--1 absolute" // Uses object-contain to fit the image
         />
       </ImageSlider>
       <InfoCard></InfoCard>
