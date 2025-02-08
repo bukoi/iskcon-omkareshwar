@@ -35,7 +35,7 @@ export default function FounderSection() {
 
         {/* Button */}
         <button className="mt-6 px-6 py-2 border-2 border-red-700 text-red-700 rounded-full 
-                           hover:bg-red-700 hover:text-white transition duration-300">
+                           hover:bg-red-800 hover:text-orange-400 transition duration-300">
           READ MORE
         </button>
       </div>

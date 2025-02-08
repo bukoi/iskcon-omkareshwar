@@ -1,9 +1,18 @@
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 import { FaCalendarDays } from "react-icons/fa6";
-
-export default function EventCard({ imageSrc, date, title }) {
+export default function EventCard({
+  imageSrc,
+  date,
+  title,
+  children,
+  width = "w-80",
+  height = "h-auto",
+}) {
   return (
-    <div className="relative mb-12 mt-6 flex flex-col items-center bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gray-800 w-80 h-auto md:w-96 md:h-auto">
+    <div
+      className={`relative mb-12 mt-6 flex p-5 pb-16 flex-col bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gray-800 md:w-96 md:h-auto ${width} ${height} m-6`}
+    >
       {/* Event Image with Zoom on Hover */}
       <div className="w-full overflow-hidden">
         <Image
@@ -12,18 +21,38 @@ export default function EventCard({ imageSrc, date, title }) {
           className="w-full transition-transform duration-300 hover:scale-110"
         />
       </div>
-      
+
       {/* Event Details */}
-      <div className="p-4 text-center">
-        <div className='flex flex-row justify-center items-center gap-4'>
-          <FaCalendarDays className="text-red-700"/>
+      <div className="p-4 flex flex-col flex-grow text-left">
+        <div className="flex flex-row items-center gap-4">
+          <FaCalendarDays className="text-red-700" />
           <p className="text-gray-600 mt-2">{date}</p>
+          {children}
         </div>
-        <h3 className="text-lg font-semibold mt-1">{title}</h3>
-        <button className="mt-4 flex items-center bg-transparent text-black font-bold rounded-full transition-all duration-500 ease-in-out hover:bg-black hover:text-white">
-          <span className="px-4 py-2">Read more</span>
-          <span className="px-4 py-2 bg-red-700 text-white rounded-r-full">➡</span>
-        </button>
+        <h3 className="text-lg font-semibold mt-1 pt-2 transition cursor-pointer hover:text-orange-600 active:text-orange-600 focus:text-orange-600 tracking-tight leading-snug">
+          {title}
+        </h3>
+      </div>
+
+      <div className="mt-4 relative flex items-center overflow-hidden rounded-full">
+        {/* Clickable Wrapper for "Read more" and Arrow */}
+        <span
+          className="relative flex items-center group cursor-pointer rounded-full overflow-hidden"
+          onClick={() => console.log("Button clicked")}
+        >
+          {/* Black Background Effect - Expands Only to Cover "Read more" */}
+          <span className="absolute right-0 top-0 h-full w-0 bg-black transition-all duration-500 ease-in-out group-hover:w-full pointer-events-none"></span>
+
+          {/* Button Text - Stays Black Initially & Turns White on Hover */}
+          <span className="relative px-5 py-2 text-black font-bold transition-all duration-300 group-hover:text-white z-10">
+            Read more
+          </span>
+
+          {/* Red Arrow Section - Stays Fixed & Unaffected */}
+          <span className="relative px-5 py-2 bg-red-700 text-white border-r-full z-10">
+            ➡
+          </span>
+        </span>
       </div>
     </div>
   );

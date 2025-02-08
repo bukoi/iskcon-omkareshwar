@@ -14,7 +14,6 @@ const IskconFooter = () => {
 		<footer
 			className="
         relative text-white 
-        // We give some minimum height to show the background image
         min-h-[300px]
         bg-no-repeat bg-cover bg-center
       "
@@ -27,12 +26,6 @@ const IskconFooter = () => {
 
 			{/* Footer content above overlay */}
 			<div className="relative container mx-auto py-6 md:py-10 px-4 md:px-8">
-				{/* 
-          Responsive grid:
-            - 1 column on very small (default)
-            - 2 columns >= sm: (640px)
-            - 3 columns >= lg: (1024px)
-        */}
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 					{/* Column 1 */}
 					<div className="space-y-2 text-center sm:text-left">
