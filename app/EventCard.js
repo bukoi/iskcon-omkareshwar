@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { FaCalendarDays } from "react-icons/fa6";
+
 export default function EventCard({
   imageSrc,
   date,
@@ -26,7 +27,8 @@ export default function EventCard({
       {/* Event Details */}
       <div className="p-4 flex flex-col flex-grow text-left">
         <div className="flex flex-row items-center gap-4">
-          <FaCalendarDays className="text-red-700" />
+          {/* Changed icon color from red to orange */}
+          <FaCalendarDays className="text-orange-500" />
           <p className="text-gray-600 mt-2">{date}</p>
           {children}
         </div>
@@ -41,16 +43,16 @@ export default function EventCard({
           className="relative flex items-center group cursor-pointer rounded-full overflow-hidden"
           onClick={() => console.log("Button clicked")}
         >
-          {/* Black Background Effect - Expands Only to Cover "Read more" */}
-          <span className="absolute right-0 top-0 h-full w-0 bg-black transition-all duration-500 ease-in-out group-hover:w-full pointer-events-none"></span>
+          {/* Orange Background Effect - Expands Only to Cover "Read more" */}
+          <span className="absolute right-0 top-0 h-full w-0 bg-orange-500 transition-all duration-500 ease-in-out group-hover:w-full pointer-events-none"></span>
 
           {/* Button Text - Stays Black Initially & Turns White on Hover */}
           <span className="relative px-5 py-2 text-black font-bold transition-all duration-300 group-hover:text-white z-10">
             Read more
           </span>
 
-          {/* Red Arrow Section - Stays Fixed & Unaffected */}
-          <span className="relative px-5 py-2 bg-red-700 text-white border-r-full z-10">
+          {/* Orange Arrow Section - Stays Fixed & Unaffected */}
+          <span className="relative px-5 py-2 bg-orange-500 text-white border-r-full z-10">
             ➡
           </span>
         </span>

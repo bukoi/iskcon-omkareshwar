@@ -1,63 +1,54 @@
+"use client";
 import Image from "next/image";
-import mainimg from "@/public/founder.png";
+import mainimg from "@/public/founder_orange.png";
 import backimg from "@/public/background.jpeg";
 
 export default function FounderSection() {
   return (
-    <div className="relative flex flex-col lg:flex-row items-center justify-center px-6 md:px-20 py-12 gap-10 w-full">
-      {/* Background Pattern using Grid with No Gaps */}
-      <div className="absolute inset-0 w-full h-full z-0 grid grid-cols-3 grid-rows-3">
-        <img
-          src={typeof backimg === "string" ? backimg : backimg.src}
-          alt="Background Pattern"
-          className="absolute inset-0 object-cover w-full h-full z-0"
-        />
-      </div>
-      <div className="absolute inset-0 bg-black/10 z-0"></div>
-
-      {/* Left Text Section */}
-      <div className="relative max-w-2xl text-left z-10">
-        <h2 className="text-red-700 text-3xl md:text-4xl font-bold mb-3">
-          OUR FOUNDER
+    <section className="relative flex flex-col lg:flex-row items-center justify-center px-6 md:px-20 py-24 w-full bg-cover bg-center"
+      style={{ backgroundImage: `url(${backimg.src})`, backgroundColor: "#F5E6C4", backgroundBlendMode: "overlay" }}>
+      
+      {/* Left Section - Founder Details */}
+      <div className="relative z-10 max-w-2xl text-center lg:text-left flex flex-col items-start">
+        <h2 className="text-orange-500 text-5xl md:text-6xl font-extrabold mb-4">
+          Our Founder
         </h2>
-        <h3 className="text-black text-2xl md:text-3xl font-extrabold">
-          HIS DIVINE GRACE A.C. BHAKTIVEDANTA SWAMI PRABHUPADA
+        <h3 className="text-gray-900 text-3xl md:text-4xl font-bold leading-tight">
+          His Divine Grace A.C. Bhaktivedanta Swami Prabhupada
         </h3>
-        <h4 className="text-lg font-bold mt-3">
-          FOUNDER-ACHARYA : INTERNATIONAL SOCIETY FOR KRISHNA CONSCIOUSNESS
+        <h4 className="text-lg font-semibold text-orange-600 mt-3">
+          Founder-Acharya: International Society for Krishna Consciousness
         </h4>
-        <p className="text-gray-700 text-base leading-relaxed mt-4">
-          Srila Prabhupada (1896-1977), was an extraordinary personality who
-          dedicated his life for teaching the world about Krishna consciousness,
-          ancient India's most noble message of spiritual wisdom. In 1965, at
-          the age of 69, he sailed from India to New York to share Lord
-          Krishna’s message, on the order of his spiritual master Srila
-          Bhaktisiddhanta Saraswati Thakura, representing a line of teachers
-          dating back to Lord Krishna Himself. ISKCON RAU was envisioned and
-          nurtured under the able guidance of HG Mahaman Prabhu Ji, one of Srila
-          Prabhupada’s dear disciples.
+        <p className="text-gray-800 text-lg leading-relaxed mt-4">
+          Srila Prabhupada (1896-1977) was an extraordinary personality who
+          dedicated his life to spreading Krishna consciousness worldwide. In 1965,
+          at the age of 69, he embarked on a mission from India to the U.S. to share
+          Lord Krishna’s message, fulfilling the vision of his spiritual master.
+          Under his guidance, ISKCON Omkareshwar was nurtured by HG Mahaman Prabhu Ji,
+          one of his dearest disciples.
         </p>
-
-        {/* Button */}
-        <button
-          className="mt-6 px-6 py-2 border-2 border-red-700 text-red-700 rounded-full 
-                           hover:bg-red-800 hover:text-orange-400 transition duration-300"
-        >
-          READ MORE
-        </button>
+        
+        {/* Call to Action Button */}
+        <div className="mt-6">
+          <button className="px-6 py-4 font-bold text-white bg-orange-500 rounded-full
+                   hover:bg-orange-600 transition duration-300 mt-6">
+            Read More
+          </button>
+        </div>
       </div>
 
-      {/* Right Image Section */}
-      <div className="relative w-full max-w-md mt-10 lg:mt-0 z-10">
-        {/* Define a container with a set aspect ratio so the image can fill it */}
-        <div className="relative w-full aspect-square">
-          <img
-            src={typeof mainimg === "string" ? mainimg : mainimg.src}
+      {/* Right Section - Image */}
+      <div className="relative w-full max-w-lg mt-10 lg:mt-0 z-10 flex justify-center">
+        <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center bg-white p-4 rounded-full shadow-2xl">
+          <Image
+            src={mainimg}
             alt="Founder"
-            className="absolute inset-0 object-contain"
+            width={350}
+            height={350}
+            className="rounded-full border-8 border-orange-600 shadow-xl"
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

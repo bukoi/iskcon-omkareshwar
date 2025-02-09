@@ -4,16 +4,16 @@ import Image from "next/image";
 import Iskconguru from "@/public/iskconguru.jpg";
 
 export default function ParallaxEffect() {
-  const [overlayOpacity, setOverlayOpacity] = useState("bg-red-500/40");
+  const [overlayOpacity, setOverlayOpacity] = useState("bg-orange-100/20");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const imageHeight = window.innerHeight * 0.5; // 50% of viewport height
       if (scrollPosition > imageHeight * 0.5) {
-        setOverlayOpacity("bg-red-200/20");
+        setOverlayOpacity("bg-orange-200/20");
       } else {
-        setOverlayOpacity("bg-red-500/40");
+        setOverlayOpacity("bg-orange-500/40");
       }
     };
 
