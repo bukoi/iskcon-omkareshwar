@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ilogo from "@/public/ilogo.png";
-import ClientHeader from "@/app/component/Header.Client"; // interactive part
+import ClientHeader from "@/app/component/Header.client"; // interactive part
 
 export default function Header() {
   return (
