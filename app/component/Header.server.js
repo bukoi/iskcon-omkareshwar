@@ -1,8 +1,8 @@
 // components/Header.server.jsx
 import Link from "next/link";
 import Image from "next/image";
-import ilogo from "@/public/ilogo.png";
 import ClientHeader from "@/app/component/Header.client"; // interactive part
+import Logo from "@/app/component/Logo";
 
 export default function Header() {
   return (
@@ -10,13 +10,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-screen-xl items-center justify-between px-6 py-3">
         {/* Logo (static) */}
         <Link href="/">
-          <Image
-            src={ilogo}
-            alt="ISKCON RAU Logo"
-            width={60}
-            height={60}
-            className="cursor-pointer"
-          />
+        <Logo/>
         </Link>
         {/* The interactive part of the header */}
         <ClientHeader />

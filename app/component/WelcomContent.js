@@ -10,15 +10,14 @@ export default function WelcomContent({ imageSrc, title }) {
 
       {/* Image Container */}
       <div className="w-full max-w-5xl">
-        <Image
-          src={imageSrc}
-          alt="Hero Section Image"
-          width={1200}
-          height={600}
-          className="rounded-xl object-cover w-full"
-          priority // Preload the hero image for faster loading
-          placeholder="blur" // Optional: enable blur-up placeholder if imageSrc is local
-        />
+      <img
+  src={imageSrc.src}  // If imageSrc is imported, you may need to use imageSrc.src
+  alt="Hero Section Image"
+  width="1200"
+  height="600"
+  className="rounded-xl object-cover w-full"
+/>
+
       </div>
 
       {/* Description Text */}

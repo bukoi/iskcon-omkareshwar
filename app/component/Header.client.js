@@ -34,6 +34,7 @@ function NavLinks({ closeMenu }) {
 
   return navLinks.map(({ href, label, icon, dropdown }) => {
     if (dropdown) {
+      // Choose the appropriate dropdown items based on the label
       const items = label === "About" ? aboutItems : label === "Program" ? programItems : [];
       const isActive = activeDropdown === label;
       return (
@@ -45,13 +46,21 @@ function NavLinks({ closeMenu }) {
           onMouseEnter={() => setActiveDropdown(label)}
           onMouseLeave={() => setActiveDropdown(null)}
         >
-          <button className="flex items-center space-x-2 text-white hover:text-sky-300 transition font-medium focus:outline-none">
+          {/* Wrap the nav item in a Link so that clicking navigates to its href */}
+          <Link
+            href={href}
+            onClick={() => {
+              setActiveDropdown(null);
+              closeMenu && closeMenu();
+            }}
+            className="flex items-center space-x-2 text-white hover:text-sky-300 transition font-medium"
+          >
             <span className="text-lg inline-flex">{icon}</span>
             <span className="ml-2 flex items-center">
               {label}
               <IoMdArrowDropdown className="ml-1" />
             </span>
-          </button>
+          </Link>
           <AnimatePresence>
             {isActive && (
               <motion.div
