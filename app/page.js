@@ -24,22 +24,22 @@ export default function Home() {
   return (
     <div className="w-full p-0 m-0 flex flex-col items-center mb-10 mt-24">
       <ImageSlider interval={10000} containerHeight="800px">
-      <Image
-  src={banner3}
+      <img
+  src={banner3.src}
   alt="Slide 1"
   width={800}
   height={600}
   className="object-cover w-full h-full z-[-1] absolute"
 />
-<Image
-  src={banner}
+<img
+  src={banner.src}
   alt="Slide 2"
   width={800}
   height={600}
   className="object-cover w-full h-full z-[-1] absolute"
 />
-<Image
-  src={banner1}
+<img
+  src={banner1.src}
   alt="Slide 3"
   width={800}
   height={600}
