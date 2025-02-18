@@ -10,7 +10,7 @@ export default function DonateCard({
 }) {
   return (
     <div
-      className={`relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${width} ${height} m-6`}
+      className={`relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${width} ${height} m-6 font-sans`}
     >
       {/* Card Image */}
       <div className="relative w-full h-48 overflow-hidden">
@@ -24,13 +24,15 @@ export default function DonateCard({
 
       {/* Card Details */}
       <div className="p-6 text-center">
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+        <h3 className="text-lg font-semibold text-gray-900 tracking-normal">
+          {title}
+        </h3>
       </div>
 
       {/* Donate Button */}
       <div className="pb-6 flex justify-center">
         <button
-          className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-md transition duration-300 hover:bg-orange-600"
+          className="bg-orange-500 text-white font-semibold text-base tracking-normal px-6 py-3 rounded-md transition duration-300 hover:bg-orange-600"
           onClick={() => console.log("Donate Now Clicked")}
         >
           {buttonText}

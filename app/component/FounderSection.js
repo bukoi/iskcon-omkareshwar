@@ -4,9 +4,14 @@ import backimg from "@/public/background.jpeg";
 
 export default function FounderSection() {
   return (
-    <section className="relative flex flex-col lg:flex-row items-center justify-center px-6 md:px-20 py-24 w-full bg-cover bg-center"
-      style={{ backgroundImage: `url(${backimg.src})`, backgroundColor: "#F5E6C4", backgroundBlendMode: "overlay" }}>
-      
+    <section
+      className="relative flex flex-col lg:flex-row items-center justify-center px-6 md:px-20 py-24 w-full bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${backimg.src})`,
+        backgroundColor: "#F5E6C4",
+        backgroundBlendMode: "overlay",
+      }}
+    >
       {/* Left Section - Founder Details */}
       <div className="relative z-10 max-w-2xl text-center lg:text-left flex flex-col items-start">
         <h2 className="text-orange-500 text-5xl md:text-6xl font-extrabold mb-4">
@@ -19,18 +24,16 @@ export default function FounderSection() {
           Founder-Acharya: International Society for Krishna Consciousness
         </h4>
         <p className="text-gray-800 text-lg leading-relaxed mt-4">
-          Srila Prabhupada (1896-1977) was an extraordinary personality who
-          dedicated his life to spreading Krishna consciousness worldwide. In 1965,
-          at the age of 69, he embarked on a mission from India to the U.S. to share
-          Lord Krishna’s message, fulfilling the vision of his spiritual master.
-          Under his guidance, ISKCON Omkareshwar was nurtured by HG Mahaman Prabhu Ji,
-          one of his dearest disciples.
+          Srila Prabhupada (1896-1977) was an extraordinary personality who dedicated his
+          life to spreading Krishna consciousness worldwide. In 1965, at the age of 69,
+          he embarked on a mission from India to the U.S. to share Lord Krishna’s message,
+          fulfilling the vision of his spiritual master. Under his guidance, ISKCON Omkareshwar
+          was nurtured by HG Mahaman Prabhu Ji, one of his dearest disciples.
         </p>
         
         {/* Call to Action Button */}
         <div className="mt-6">
-          <button className="px-6 py-4 font-bold text-white bg-orange-500 rounded-full
-                   hover:bg-orange-600 transition duration-300 mt-6">
+          <button className="px-6 py-4 font-bold text-white bg-orange-500 rounded-full hover:bg-orange-600 transition duration-300 mt-6">
             Read More
           </button>
         </div>

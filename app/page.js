@@ -7,7 +7,6 @@ import { FaUser } from "react-icons/fa";
 const ImageSlider = dynamic(() => import("@/app/component/ImageSlider.js"));
 const WelcomContent = dynamic(() => import("@/app/component/WelcomContent"));
 const FounderSection = dynamic(() => import("@/app/component/FounderSection.js"));
-const ParallaxEffect = dynamic(() => import("@/app/component/ParallaxEffect.js"));
 const DonateCard = dynamic(() => import("@/app/component/DonateCard.js"));
 
 // Import static images as usual

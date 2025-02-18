@@ -1,4 +1,3 @@
-// components/Header.client.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -34,26 +33,26 @@ function NavLinks({ closeMenu }) {
 
   return navLinks.map(({ href, label, icon, dropdown }) => {
     if (dropdown) {
-      // Choose the appropriate dropdown items based on the label
-      const items = label === "About" ? aboutItems : label === "Program" ? programItems : [];
+      // Choose appropriate dropdown items based on the label
+      const items =
+        label === "About" ? aboutItems : label === "Program" ? programItems : [];
       const isActive = activeDropdown === label;
       return (
         <motion.div
           key={label}
-          className="relative"
+          className="relative font-sans"
           whileHover={{ scale: 1.1, x: 5 }}
           transition={{ type: "spring", stiffness: 300 }}
           onMouseEnter={() => setActiveDropdown(label)}
           onMouseLeave={() => setActiveDropdown(null)}
         >
-          {/* Wrap the nav item in a Link so that clicking navigates to its href */}
           <Link
             href={href}
             onClick={() => {
               setActiveDropdown(null);
               closeMenu && closeMenu();
             }}
-            className="flex items-center space-x-2 text-white hover:text-sky-300 transition font-medium"
+            className="flex items-center space-x-2 text-white hover:text-sky-300 transition font-medium text-base tracking-normal"
           >
             <span className="text-lg inline-flex">{icon}</span>
             <span className="ml-2 flex items-center">
@@ -68,7 +67,7 @@ function NavLinks({ closeMenu }) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -5 }}
                 transition={{ duration: 0.2 }}
-                className="absolute left-0 mt-2 w-56 bg-sky-700 border border-sky-700 shadow-lg z-50 rounded-md p-2"
+                className="absolute left-0 mt-2 w-56 bg-sky-700 border border-sky-700 shadow-lg z-50 rounded-md p-2 font-sans"
               >
                 <ul>
                   {items.map((item) => (
@@ -79,7 +78,7 @@ function NavLinks({ closeMenu }) {
                           setActiveDropdown(null);
                           closeMenu && closeMenu();
                         }}
-                        className="block px-4 py-2 text-white hover:bg-sky-600 transition-colors uppercase tracking-wide text-sm rounded-md"
+                        className="block px-4 py-2 text-white hover:bg-sky-600 transition-colors uppercase tracking-wide text-sm rounded-md font-sans"
                       >
                         <span className="inline-flex items-center">
                           <IoFlower className="text-lg mr-1" />
@@ -98,13 +97,14 @@ function NavLinks({ closeMenu }) {
     return (
       <motion.div
         key={href}
+        className="font-sans"
         whileHover={{ scale: 1.1, x: 5 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
         <Link
           href={href}
           onClick={closeMenu}
-          className="flex items-center space-x-2 text-white hover:text-sky-300 transition font-medium"
+          className="flex items-center space-x-2 text-white hover:text-sky-300 transition font-medium text-base tracking-normal"
         >
           <span className="text-lg inline-flex">{icon}</span>
           <span className="ml-2 flex items-center">{label}</span>
@@ -129,14 +129,14 @@ export default function HeaderClient() {
   return (
     <>
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-6">
+      <div className="hidden md:flex items-center space-x-6 font-sans">
         <nav className="flex space-x-6">
           <NavLinks />
         </nav>
         <motion.div whileHover={{ scale: 1.1 }}>
           <Link
             href="/donate"
-            className="bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-orange-600 transition"
+            className="bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-orange-600 transition text-base tracking-normal"
           >
             Donate
           </Link>
@@ -146,7 +146,7 @@ export default function HeaderClient() {
       {/* Mobile Menu Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden text-white focus:outline-none"
+        className="md:hidden text-white focus:outline-none font-sans"
         whileTap={{ scale: 0.9 }}
         aria-label="Toggle navigation menu"
         aria-expanded={isOpen}
@@ -163,7 +163,7 @@ export default function HeaderClient() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", stiffness: 120, damping: 15 }}
-              className="fixed inset-0 w-64 h-screen bg-sky-700 shadow-lg z-50 flex flex-col p-6"
+              className="fixed inset-0 w-64 h-screen bg-sky-700 shadow-lg z-50 flex flex-col p-6 font-sans"
             >
               <button
                 onClick={() => setIsOpen(false)}
@@ -187,7 +187,7 @@ export default function HeaderClient() {
                 <Link
                   href="/donate"
                   onClick={() => setIsOpen(false)}
-                  className="bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-orange-600 transition"
+                  className="bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-orange-600 transition text-base tracking-normal"
                 >
                   Donate
                 </Link>
@@ -195,7 +195,7 @@ export default function HeaderClient() {
             </motion.div>
             {/* Overlay */}
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 opacity-100"
+              className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 opacity-100 font-sans"
               onClick={() => setIsOpen(false)}
             />
           </>

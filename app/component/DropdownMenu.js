@@ -17,16 +17,16 @@ export default function DropdownMenu({
   buttonText = "Menu",
   buttonIcon = <IoFlower className="text-lg" />,
   itemIcon = <IoFlower className="text-lg" />,
-  buttonClasses = "flex items-center space-x-2 bg-sky-700 text-white font-medium px-2 py-2 rounded-md shadow-md transition",
-  dropdownClasses = "absolute left-0 mt-2 w-48 bg-sky-700 shadow-lg z-50 rounded p-1",
-  itemClasses = "flex items-center space-x-2 text-white px-2 py-2 uppercase tracking-wide text-sm rounded-md",
+  buttonClasses = "flex items-center space-x-2 bg-sky-700 text-white font-medium font-sans text-base tracking-normal px-2 py-2 rounded shadow-md transition",
+  dropdownClasses = "absolute left-0 mt-2 w-48 bg-sky-700 shadow-lg z-50 rounded p-1 font-sans",
+  itemClasses = "flex items-center space-x-2 text-white px-2 py-2 uppercase tracking-wide text-sm rounded-md font-sans",
   onItemClick,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div
-      className="relative inline-block text-left"
+      className="relative inline-block text-left font-sans"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
