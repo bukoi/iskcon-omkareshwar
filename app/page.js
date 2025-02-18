@@ -4,11 +4,10 @@ import { FaUser } from "react-icons/fa";
 
 
 // Dynamically import components
-const ImageSlider = dynamic(() => import("@/app/component/ImageSlider.js"));
-const WelcomContent = dynamic(() => import("@/app/component/WelcomContent"));
-const FounderSection = dynamic(() => import("@/app/component/FounderSection.js"));
-const DonateCard = dynamic(() => import("@/app/component/DonateCard.js"));
-
+import ImageSlider from "@/app/component/ImageSlider.js";
+import WelcomContent from "@/app/component/WelcomContent";
+import FounderSection from "@/app/component/FounderSection.js";
+import DonateCard from "@/app/component/DonateCard.js";
 // Import static images as usual
 import Imagerau from "@/public/iskconRau.jpg";
 import member from "@/public/member.jpg";
