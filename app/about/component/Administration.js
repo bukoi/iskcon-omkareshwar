@@ -27,7 +27,7 @@ export default function AdminExpandableCards() {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   return (
-    <section className="bg-white py-10">
+    <section className="bg-white py-10 pt-4">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6 text-sky-900 text-center">
           Administration

@@ -25,7 +25,7 @@ export default function FounderAcharya() {
 
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat py-16 text-white font-sans"
+      className="relative bg-cover bg-center bg-no-repeat py-16 text-white font-sans pt-4"
       style={{
         backgroundImage: `url(${spWalkingImage.src})`,
         minHeight: "80vh", // Adjust as needed

@@ -33,7 +33,7 @@ export default function HareKrishnaMovement() {
   return (
     <>
       {/* Parent Section (relative to contain absolute children) */}
-      <section className="relative bg-white py-16 font-serif">
+      <section className="relative bg-white py-16 font-serif pt-4">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           {/* Left Column (Text) */}
           <div className="md:w-1/2 text-center md:text-left">

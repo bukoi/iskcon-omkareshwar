@@ -1,7 +1,7 @@
 export default function WhyKrishna() {
     return (
       <section className="bg-white py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 pt-4">
           <div className="flex flex-col items-center justify-center text-center">
             
             {/* Heading with Gradient Text */}
