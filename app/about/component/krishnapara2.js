@@ -1,4 +1,4 @@
-export default function DissolveInKrishna() {
+export default function WhyKrishna() {
     return (
       <section className="bg-white py-12">
         <div className="container mx-auto px-6">
@@ -19,16 +19,12 @@ export default function DissolveInKrishna() {
                 text-transparent
               "
             >
-              Dissolve in Krishna Consciousness
+              WHY KRISHNA?
             </h2>
             
             {/* Paragraph */}
             <p className="max-w-3xl mt-6 text-slate-700 text-lg leading-loose text-justify font-serif">
-              Krishna Consciousness is an awareness and an affection for the Supreme Being,
-              Krishna. To be Krishna Conscious is to be a devotee—Bhakti—and be on the path of
-              Bhakti. Bhakti (the path of devotion) states that the highest duty of man is to do
-              that which generates devotion to Krishna; devotion that is motiveless, unyielding
-              to any obstacle, and that fills the heart with peace.
+            Deep dive into the spiritual oasis that is the Hare Krishna Movement by way of these insightful short-films, which even as they sate your curiosity are sure to evoke the great thirst in you. The thirst for Krishna, the desire to serve Him and to walk the path of Bhakti, which is the religion of love and is the core of the Hare Krishna Movement.
             </p>
             
             {/* Divider */}

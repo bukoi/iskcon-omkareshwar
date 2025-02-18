@@ -5,7 +5,7 @@ import spWalkingImage from "@/public/SP_Walking2.jpg";
 export default function FounderAcharya() {
   // Function to handle the redirect
   const handleRedirect = () => {
-    window.location.href = "https://iskconrau.com/founder-acharya";
+    window.location.href = "http://www.prabhupada.com/";
   };
 
   // Example text for the founder section

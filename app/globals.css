@@ -23,3 +23,7 @@ body {
 	word-spacing: 2px; /* Adjust spacing as needed */
   }
   
+  html {
+	scroll-behavior: smooth;
+  }
+  

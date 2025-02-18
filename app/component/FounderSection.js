@@ -1,8 +1,9 @@
 import Image from "next/image";
 import mainimg from "@/public/founder_orange.png";
 import backimg from "@/public/background.jpeg";
-
+import Readmore from "@/app/component/FounderReadmore";
 export default function FounderSection() {
+  
   return (
     <section
       className="relative flex flex-col lg:flex-row items-center justify-center px-6 md:px-20 py-24 w-full bg-cover bg-center"
@@ -33,9 +34,7 @@ export default function FounderSection() {
         
         {/* Call to Action Button */}
         <div className="mt-6">
-          <button className="px-6 py-4 font-bold text-white bg-orange-500 rounded-full hover:bg-orange-600 transition duration-300 mt-6">
-            Read More
-          </button>
+          <Readmore/>
         </div>
       </div>
 

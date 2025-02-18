@@ -1,7 +1,6 @@
-import Image from "next/image";
-import WelcomContent from "@/app/component/WelcomContent";
+"use client";
 import iskcon_collage from "@/public/iskcon_collage.jpg";
-import DissolveInKrishna from "@/app/about/component/krishnapara";
+import WhyKrishna from "@/app/about/component/krishnapara2";
 import HareKrishnaMovement from "@/app/about/component/iskconmission";
 import FounderAcharya from "@/app/about/component/FounderAcharya";
 import OurPhilosophyModal from "@/app/about/component/OurPhilosophyModal";
@@ -10,39 +9,42 @@ import AdministrationAccordion from "@/app/about/component/Administration";
 export default function About() {
   return (
     <div className="relative">
-      {/* Background image fixed behind everything */}
       <img
         src={iskcon_collage.src}
         alt="Background"
         className="
-          fixed
-          top-0
-          left-0
-          w-full
-          h-[55vh]      /* Fixed height so we know exactly how tall it is */
-          object-cover  /* Ensures the image isn't distorted */
-          z-[-10]
-          mt-24       /* Push behind other elements */
+          fixed top-0 left-0 w-full h-[55vh] object-cover z-[-10] mt-24
         "
       />
-
-      {/* Page content goes here */}
       <div
         className="
-          mt-[70vh]         /* Match the image height so content appears just below it */
-          z-10
-          bg-white
-          bg-opacity-100
-          backdrop-blur-md
+          mt-[70vh] z-10 bg-white bg-opacity-100 backdrop-blur-md
         "
       >
-        <DissolveInKrishna />
-        <HareKrishnaMovement />
-        <FounderAcharya />
-        <div className="w-full p-0 m-0">
+        {/* 1) Why Krishna */}
+        <section id="why-krishna" className="py-8">
+          <WhyKrishna />
+        </section>
+
+        {/* 2) ISKCON Mission */}
+        <section id="mission" className="py-8">
+          <HareKrishnaMovement />
+        </section>
+
+        {/* 3) Founder Acharya */}
+        <section id="founder" className="py-8">
+          <FounderAcharya />
+        </section>
+
+        {/* 4) Our Philosophy */}
+        <section id="our-philosophy" className="py-8">
           <OurPhilosophyModal />
+        </section>
+
+        {/* 5) Administration */}
+        <section id="administration" className="py-8">
           <AdministrationAccordion />
-        </div>
+        </section>
       </div>
     </div>
   );

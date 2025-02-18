@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WelcomContent({ imageSrc, title }) {
   return (
@@ -45,9 +46,12 @@ export default function WelcomContent({ imageSrc, title }) {
         </p>
       </div>
 
-      <button className="px-6 py-4 font-bold text-white bg-orange-500 rounded-full hover:bg-orange-600 transition duration-300 mt-6">
-        KNOW MORE ABOUT ISKCON
-      </button>
+      {/* Know More Button with Link */}
+      <Link href="/about">
+        <button className="px-6 py-4 font-bold text-white bg-orange-500 rounded-full hover:bg-orange-600 transition duration-300 mt-6">
+          KNOW MORE ABOUT ISKCON
+        </button>
+      </Link>
     </div>
   );
 }
