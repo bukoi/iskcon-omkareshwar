@@ -76,7 +76,7 @@ export default function HareKrishnaMovement() {
             <>
               {/* Overlay */}
               <motion.div
-                className="absolute inset-0 bg-black bg-opacity-50 z-50"
+                className="absolute inset-0 bg-black bg-opacity-50 z-50 w-screen h-screen"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
