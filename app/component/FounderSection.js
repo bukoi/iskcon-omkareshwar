@@ -2,8 +2,8 @@ import Image from "next/image";
 import mainimg from "@/public/founder_orange.png";
 import backimg from "@/public/background.jpeg";
 import Readmore from "@/app/component/FounderReadmore";
+
 export default function FounderSection() {
-  
   return (
     <section
       className="relative flex flex-col lg:flex-row items-center justify-center px-6 md:px-20 py-24 w-full bg-cover bg-center"
@@ -29,12 +29,15 @@ export default function FounderSection() {
           life to spreading Krishna consciousness worldwide. In 1965, at the age of 69,
           he embarked on a mission from India to the U.S. to share Lord Krishna’s message,
           fulfilling the vision of his spiritual master. Under his guidance, ISKCON Omkareshwar
-          was nurtured by HG Mahaman Prabhu Ji, one of his dearest disciples.
+          was nurtured by HG Mahaman Prabhu Ji, one of his dearest disciples. His compassionate
+          legacy also includes the{" "}
+          <span className="text-orange-500 font-bold">Food for Life</span> scheme, a vital
+          initiative that provides free pure vegetarian meals to those in need.
         </p>
         
         {/* Call to Action Button */}
         <div className="mt-6">
-          <Readmore/>
+          <Readmore />
         </div>
       </div>
 

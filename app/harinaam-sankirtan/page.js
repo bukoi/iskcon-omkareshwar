@@ -47,9 +47,9 @@ const HomeSatsang = () => {
 
           {/* Join Button */}
           <div className="mt-6">
-            <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition">
+            <a href="https://chat.whatsapp.com/FCiC4k39NapJrP6n6ug46p"className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition">
               Join a Satsang Near You
-            </button>
+            </a>
           </div>
         </div>
       </div>

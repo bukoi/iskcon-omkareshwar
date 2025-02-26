@@ -23,9 +23,13 @@ const SundayFeast = () => {
           <p className="text-lg max-w-2xl">
             Experience spirituality, joy, and delicious vegetarian food in a blissful environment.
           </p>
-          <button className="mt-4 px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition font-semibold shadow-md">
-            Join Us
-          </button>
+          <a
+  className="mt-4 px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition font-semibold shadow-md"
+  href="https://chat.whatsapp.com/FCiC4k39NapJrP6n6ug46p"
+>
+  Join Us
+</a>
+
         </div>
       </div>
 
@@ -63,8 +67,8 @@ const SundayFeast = () => {
           <div className="text-center mt-12">
           <h2 className="text-2xl font-bold mb-3">Have Questions?</h2>
           <p className="text-gray-600">Reach out to us for more details.</p>
-          <a href="tel:+917771099906" className="mt-3 inline-block text-lg font-semibold text-yellow-600">
-            📞 +91 7771099906
+          <a href="tel:+917733004108" className="mt-3 inline-block text-lg font-semibold text-yellow-600">
+            📞 +91 7733004108
           </a>
         </div>
         </div>

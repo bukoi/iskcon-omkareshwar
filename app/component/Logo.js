@@ -7,8 +7,8 @@ export default function Logo() {
     <Image
       src={ilogo}
       alt="ISKCON RAU Logo"
-      width={60}
-      height={60}
+      width={90}
+      height={90}
       className="cursor-pointer"
     />
   );

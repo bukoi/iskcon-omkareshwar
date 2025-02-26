@@ -8,17 +8,26 @@ const admins = [
   {
     name: "H G Mahaman Prabhuji",
     image: maharj,
-    bio: `HG Mahaman Prabhuji is a senior disciple of Srila Prabhupada. He serves as a Zonal Secretary for ISKCON across several Indian states.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique sapien ac felis tempus, sed efficitur diam mattis. Cras dignissim vestibulum libero, ac congue lorem volutpat et. Nulla pretium varius lorem, sit amet mollis ante luctus eget. Donec maximus consequat elementum.
+    bio: `HG Mahaman Prabhuji is a senior disciple of His Divine Grace A C Bhaktivedanta Swami Prabhupada.
+He came in touch with ISKCON in 1972 while finishing his Mechanical Engineering degree in London, England. He joined ISKCON as a Full time devotee and took his Harinam and later Brahmin initiation by Srila Prabhupada in 1973.
+After this he had Book distribution and Life-Membership engagements till 1977 when hecame to India and served with the BBT Library party. From 1982 to 1992 he served as the Temple President of Hyderabad temple and farm.
+From 1995 to 2004 he served as the Temple President of an International Project of ISKCON in Vrindavan.
+Currently he serves as the Zonal Secretary for various states in North India such as Madhya Pradesh, Haryana, Punjab, Uttarakhand, Himachal Pradesh and also Chhattisgarh. He is also the Temple President for ISKCON Indore and a member of the International SABHA group.
+Further he is an Initiating Spiritual Master (Diksha Guru) in ISKCON having several disciples all over India.
     `,
   },
   {
     name: "H G Praneshwar Prabhu",
     image: senior,
-    bio: `Praneshwar Das serves ISKCON Indore as Vice President. He has led several major preaching projects throughout Madhya Pradesh.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse mollis nisi in ligula vehicula, quis fringilla enim gravida. Vivamus rhoncus massa sem, ac congue justo ornare a. Aliquam erat volutpat.
+    bio: `Praneshwar Das was born and brought up in Mumbai and belongs to a South Indian (Mangalore) family.
+He did his Mechanical Engineering from SES COE, Kopergaon, Pune University in 1993.
+He has subsequently done his Masters in Philosophy& Religion from Madurai Kamraj university. Also he is currently a PhD Research Scholar, pursuing PhD in the field of spirituality from Madurai Kamraj University.
+After finishing his studies in 1993, he worked for 3 years in a Multinational Company before joining as a full time Brahmachari.
+He is a disciple of HH Radhanath Swami Maharaj having taken both Harinam and Brahman initiations from him.
+He came in touch with ISKCON in 1995, in JUHU Mumbai and joined as a full time Brahmachari in 1997. After serving in the Bhaktivedanta Institute for 2 years, he served in the IYF Youth Preaching department for 13 years till 2013 where he served as HOD for many years. Apart from this he was also involved with Brahmachari training, helping in Organizing Festivals, Event Management etc.
+From 2013 till date, he has been serving in ISKCON Indore under the kind and able guidance of HG Mahaman Prabhuji as Vice President for Indore and Regional Secretary for Madhya Pradesh having initiated several preaching projects in several places in Madhya Pradesh such as Gwalior, Dewas, Rau, Mhow, Chhindwara, Ratlam, Rewa, Vidisha, Shivpuri, Shahdol, Khandwa, Umaria etc..
+He also served as NIDC Secretary for North India and is a convener for ICC Book Distribution Committee.
+Apart from the above, he is also involved in teaching Bhaktisastri and Bhaktivaibhava in VIHE, Mayapur Institute since many years. He has visited and given seminars in countries like New Zealand, Mauritius, Muscat, Singapore, Malaysia, Thailand, Fiji etc.
     `,
   },
 ];

@@ -10,17 +10,8 @@ export default function FounderAcharya() {
 
   // Example text for the founder section
   const founderText = `
-    His Divine Grace A.C. Bhaktivedanta Swami Prabhupada (1896–1977) is the founder-acharya of
-    the International Society for Krishna Consciousness (ISKCON). He is especially respected
-    as the world's most prominent contemporary authority on bhakti-yoga, devotional service
-    to the Supreme Person, Sri Krishna, as taught by the ancient Vedic writings of India.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus augue in leo 
-    fermentum, non cursus dui vulputate. Quisque blandit lacinia lectus, eu dignissim enim 
-    convallis non. Proin feugiat orci vel purus tincidunt, vitae feugiat sapien placerat. 
-    Vivamus vehicula lectus quis neque imperdiet fermentum. Vestibulum ante ipsum primis in 
-    faucibus orci luctus et ultrices posuere cubilia curae; Donec auctor, nisi a euismod 
-    facilisis, libero massa varius nunc, a ullamcorper velit risus et orci.
+   Within the final twenty years of his life Srila Prabhupada translated over sixty volumes of classic Vedic scriptures (such as the Bhagavad Gita and the Srimad Bhagavatam) into the English language. For their authority, depth, and clarity, his books have won praise from professors at universities like Harvard and Oxford, and his Bhagavad-Gita As It Is was published by Macmillan Publishers in 1968 and the unabridged edition in 1972, and is now available in over sixty languages around the world. Other books by Srila Prabhupada are available in over eighty different languages. Over 500 million books of his have been distributed to date.
+Srila Prabhupada established The Bhaktivedanta Book Trust (BBT) in 1972 to publish his works. The BBT has also published his multi-volume biography, Srila Prabhupada-Lilamrta, that, according to acclaimed scholar of religion Larry Shinn, will “certainly be one of the most complete records of the life and work of any modern religious figure”. Srila Prabhupada reminded his devotees before his passing that he would live forever in his books, and through them would remain present as a spiritual master or guru. He had instilled in his followers an understanding of the importance of writing and publishing not only with regard to his works, but also their own initiatives.
   `;
 
   return (

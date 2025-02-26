@@ -11,9 +11,9 @@ import {
 } from "react-icons/fa";
 
 const socialIcons = [
-  { href: "#", icon: <FaFacebookF />, label: "Facebook" },
-  { href: "#", icon: <FaInstagram />, label: "Instagram" },
-  { href: "#", icon: <FaYoutube />, label: "YouTube" },
+  { href: "https://www.facebook.com/share/15Nf6zVNQ5/", icon: <FaFacebookF />, label: "Facebook" },
+  { href: "https://www.instagram.com/iskconomkareshwar?igsh=MW1meXp6dW9pbHpl", icon: <FaInstagram />, label: "Instagram" },
+  { href: "https://youtube.com/@iskconomkareshwar?si=LDmVGkrlxvUnEPVn", icon: <FaYoutube />, label: "YouTube" },
   { href: "#", icon: <FaTwitter />, label: "Twitter" },
   { href: "#", icon: <FaLinkedinIn />, label: "LinkedIn" },
 ];

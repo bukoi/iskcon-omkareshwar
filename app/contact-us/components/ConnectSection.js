@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import dummyLogo from "@/public/ilogo.png"
+import dummyLogo from "@/public/ilogoblue.png";
+
 // Default contact data for ISKCON Omkareshwar
 const defaultContactData = {
   templeName: "ISKCON Omkareshwar",
@@ -10,19 +11,16 @@ const defaultContactData = {
     "Hare Krishna Hill, Mansarovar",
     "Omkareshwar, Madhya Pradesh, 456001",
   ],
-  phone: "+91-1234567890",
-  email: "contact@iskconomkareshwar.org",
-  adminName: "John Doe, Admin Head",
-  adminSupport: "admin.support@iskconomkareshwar.org",
-  adminPhone: "+91-9876543210",
-  logo: dummyLogo, // e.g., an imported image
+  phone: "+91-7733004108",
+  email: "support@iskconomkareshwar.com",
+  adminName: "Animesh Tiwari, Admin Head",
+  logo: dummyLogo,
 };
 
 export default function ConnectSection({
   contactData = defaultContactData,
   formTitle = "Contact Form",
 }) {
-  // Form state (dummy)
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -32,18 +30,38 @@ export default function ConnectSection({
   const [authorize, setAuthorize] = useState(false);
   const [status, setStatus] = useState("");
 
-  // Update form values
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-  // Dummy submit handler
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Form submitted! (Dummy)");
-    // Reset form if needed:
-    setFormValues({ name: "", email: "", phone: "", message: "" });
+
+    try {
+      // Send data to our API route
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formValues,
+          authorize,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus("Your message has been sent successfully!");
+        setFormValues({ name: "", email: "", phone: "", message: "" });
+        setAuthorize(false);
+      } else {
+        setStatus("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("An error occurred. Please try again later.");
+    }
   };
 
   return (
@@ -53,17 +71,17 @@ export default function ConnectSection({
         <div className="md:w-1/2 bg-gray-50 p-6 flex flex-col items-center justify-center rounded-lg shadow-md">
           <div className="text-center space-y-3 flex flex-col justify-center">
             {/* Logo */}
-            <div className="flex justify-center items-center mb-4">
-              {contactData.logo && (
+            {contactData.logo && (
+              <div className="flex justify-center items-center mb-4">
                 <Image
                   src={contactData.logo}
                   alt={`${contactData.templeName} Logo`}
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                   className="object-contain"
                 />
-              )}
-            </div>
+              </div>
+            )}
             {/* Temple Name */}
             <h2 className="text-2xl md:text-3xl font-bold text-sky-900">
               {contactData.templeName}
@@ -87,13 +105,11 @@ export default function ConnectSection({
             </p>
             {/* Admin Info */}
             <p className="text-gray-800 mt-4">
-              <span className="font-semibold">
-                {contactData.adminName || "Admin Head"}
-              </span>
+              <span className="font-semibold">{contactData.adminName}</span>
               <br />
-              {contactData.adminSupport || "admin.support@temple.org"}
+              {contactData.adminSupport}
               <br />
-              {contactData.adminPhone || "+91-1234567890"}
+              {contactData.adminPhone}
             </p>
           </div>
         </div>
@@ -184,7 +200,7 @@ export default function ConnectSection({
               </button>
             </div>
           </form>
-          {status && <p className="mt-3 text-sm">{status}</p>}
+          {status && <p className="mt-3 text-sm text-green-700">{status}</p>}
         </div>
       </div>
     </section>

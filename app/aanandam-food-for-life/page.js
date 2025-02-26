@@ -59,9 +59,9 @@ const Annadanam = () => {
 
           {/* CTA Buttons */}
           <div className="mt-6 flex gap-4">
-            <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition">
+            <a href="https://chat.whatsapp.com/FCiC4k39NapJrP6n6ug46p" className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition">
               Join Us
-            </button>
+            </a>
             <button className="px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white font-semibold rounded-lg shadow-md transition">
               Donate Now
             </button>
